@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Venkteshwara Electronics – TV & Appliance Repair in Madhugiri</title>
+<meta name="description" content="Expert electronics repair & sales in Madhugiri. TV repair, mixer/grinder servicing, used & new electronics. 15+ years experience. Call +91 99453 12359. Walk-in welcome at Doddapet.">
+<meta name="keywords" content="TV repair Madhugiri, electronics repair Madhugiri, mixer grinder repair, LED TV repair, appliance service Doddapet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   DESIGN SYSTEM
+   Electronics repair shop — Trust + Speed
+   Blue (reliable/technical) + Amber (warmth/energy)
+   ══════════════════════════════════════ */
+:root{
+  --blue:#1a3a6b;
+  --blue-dark:#0e2347;
+  --blue-mid:#24508f;
+  --amber:#e07b1a;
+  --amber-light:#f59c3a;
+  --amber-pale:rgba(224,123,26,0.10);
+  --amber-glow:rgba(224,123,26,0.20);
+  --white:#ffffff;
+  --off:#f7f9fc;
+  --light:#eef2f8;
+  --text:#1c2b3a;
+  --muted:#5a6e84;
+  --border:#dce5f0;
+  --green:#16a34a;
+  --card:#ffffff;
+  --radius:12px;
+  --shadow:0 2px 16px rgba(26,58,107,0.08);
+  --shadow-hover:0 8px 32px rgba(26,58,107,0.15);
+}
+
+/* RESET & BASE */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--off);overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font-family:'Outfit',sans-serif;cursor:pointer;border:none}
+
+/* ── CIRCUIT PATTERN ── */
+.circuit-bg{
+  background-color:var(--blue-dark);
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px),
+    radial-gradient(circle at 20% 50%, rgba(224,123,26,.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(36,80,143,.3) 0%, transparent 40%);
+  background-size:40px 40px, 40px 40px, 100% 100%, 100% 100%;
+}
+
+/* ── TYPOGRAPHY ── */
+.heading-xl{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em}
+.heading-lg{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;line-height:1.2;letter-spacing:-0.01em}
+.heading-md{font-size:1.25rem;font-weight:700}
+.body-lg{font-size:1.05rem;line-height:1.75}
+.body-sm{font-size:0.875rem;line-height:1.6}
+.label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+
+/* ── LAYOUT ── */
+.container{max-width:1160px;margin:0 auto;padding:0 5%}
+section{padding:5rem 0}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.8rem;border-radius:8px;font-size:0.95rem;font-weight:700;transition:all 0.22s;white-space:nowrap;letter-spacing:0.01em}
+.btn-primary{background:var(--amber);color:#fff;box-shadow:0 4px 14px rgba(224,123,26,.35)}
+.btn-primary:hover{background:var(--amber-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,123,26,.45)}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#20bb59;transform:translateY(-2px)}
+.btn-call{background:var(--blue);color:#fff}
+.btn-call:hover{background:var(--blue-mid);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.btn-ghost{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2)}
+.btn-ghost:hover{background:rgba(255,255,255,0.18)}
+.btn-lg{padding:1rem 2.2rem;font-size:1rem}
+.btn-sm{padding:0.55rem 1.1rem;font-size:0.83rem}
+
+/* ══════════════════════════════
+   NAVBAR
+   ══════════════════════════════ */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(14,35,71,0.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(224,123,26,0.18);
+  height:64px;
+  display:flex;align-items:center;
+}
+.nav-inner{width:100%;max-width:1160px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-brand{display:flex;align-items:center;gap:0.7rem}
+.nav-logo-icon{width:36px;height:36px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-icon svg{width:20px;height:20px;fill:#fff}
+.nav-brand-text{line-height:1.15}
+.nav-brand-name{font-size:0.95rem;font-weight:800;color:#fff;letter-spacing:-0.01em}
+.nav-brand-sub{font-size:0.68rem;color:rgba(255,255,255,0.45);font-weight:400;letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);font-size:0.875rem;font-weight:500;transition:color 0.2s;padding:0.2rem 0;border-bottom:2px solid transparent}
+.nav-links a:hover{color:var(--amber-light);border-bottom-color:var(--amber)}
+.nav-actions{display:flex;align-items:center;gap:0.6rem}
+.nav-phone{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.85);font-size:0.83rem;font-weight:600}
+.nav-phone svg{width:14px;height:14px;stroke:#25D366;fill:none;stroke-width:2}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:rgba(255,255,255,0.06);border-radius:6px}
+.ham span{width:20px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s}
+.mob-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);z-index:999;border-bottom:2px solid var(--amber)}
+.mob-nav.open{display:block}
+.mob-nav a{display:flex;align-items:center;gap:0.7rem;padding:0.9rem 5%;color:rgba(255,255,255,0.85);font-size:0.95rem;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s}
+.mob-nav a:hover{color:var(--amber-light)}
+.mob-nav-actions{padding:1rem 5%;display:flex;flex-direction:column;gap:0.6rem}
+
+/* ══════════════════════════════
+   HERO
+   ══════════════════════════════ */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding-top:64px;
+  position:relative;overflow:hidden;
+}
+.hero-photo{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?w=1600&q=80');
+  background-size:cover;background-position:center;
+}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg, rgba(14,35,71,0.96) 0%, rgba(14,35,71,0.88) 45%, rgba(14,35,71,0.5) 100%)}
+.hero-inner{position:relative;z-index:2;padding:5rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:3rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(224,123,26,0.15);border:1px solid rgba(224,123,26,0.4);color:var(--amber-light);padding:0.35rem 0.9rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.2rem}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
+.hero-title{color:#fff;margin-bottom:1.2rem}
+.hero-title .line2{color:var(--amber-light)}
+.hero-desc{color:rgba(255,255,255,0.7);font-size:1.05rem;line-height:1.75;margin-bottom:2rem;max-width:500px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.htrust-item{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.6);font-size:0.82rem}
+.htrust-item svg{width:14px;height:14px;stroke:var(--green);fill:none;stroke-width:2.5}
+/* stats card */
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:1.8rem;backdrop-filter:blur(8px)}
+.hero-card-title{color:rgba(255,255,255,0.45);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.hstat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);border-radius:10px;overflow:hidden;margin-bottom:1.2rem}
+.hstat{background:rgba(255,255,255,0.04);padding:1.2rem;text-align:center}
+.hstat-num{font-size:1.9rem;font-weight:800;color:var(--amber-light);line-height:1;display:block}
+.hstat-lbl{font-size:0.72rem;color:rgba(255,255,255,0.5);margin-top:0.2rem}
+.hcard-services{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.2rem}
+.hchip{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.75);padding:0.3rem 0.75rem;border-radius:20px;font-size:0.78rem;display:flex;align-items:center;gap:0.3rem}
+.hcard-info{display:flex;flex-direction:column;gap:0.6rem}
+.hci{display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.6);font-size:0.82rem}
+.hci svg{width:14px;height:14px;flex-shrink:0;stroke:var(--amber-light);fill:none;stroke-width:2}
+/* open badge */
+.open-badge{display:inline-flex;align-items:center;gap:0.4rem;background:#16a34a;color:#fff;font-size:0.72rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:20px;margin-left:0.5rem}
+.open-dot{width:6px;height:6px;background:#fff;border-radius:50%;animation:pulse 1.5s infinite}
+
+/* ══════════════════════════════
+   TRUST BAR
+   ══════════════════════════════ */
+.trust-bar{background:var(--blue);padding:1.2rem 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.tbar-item{display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.85);font-size:0.88rem;font-weight:500}
+.tbar-item svg{width:18px;height:18px;stroke:var(--amber-light);fill:none;stroke-width:2}
+.tbar-sep{width:1px;height:20px;background:rgba(255,255,255,0.15)}
+
+/* ══════════════════════════════
+   ABOUT
+   ══════════════════════════════ */
+#about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img-wrap{position:relative;border-radius:16px;overflow:visible}
+.about-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:var(--shadow-hover)}
+.about-img-placeholder{width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;position:relative;background:var(--blue-dark)}
+.about-img-placeholder img{width:100%;height:100%;object-fit:cover;opacity:0.85}
+.exp-badge{position:absolute;bottom:-1rem;left:-1rem;background:var(--amber);color:#fff;padding:1.1rem 1.4rem;border-radius:12px;box-shadow:0 8px 24px rgba(224,123,26,0.4);text-align:center;z-index:2}
+.exp-num{font-size:2rem;font-weight:800;line-height:1;display:block}
+.exp-lbl{font-size:0.68rem;font-weight:700;opacity:0.9;margin-top:0.1rem}
+.owner-card{position:absolute;top:-1rem;right:-1rem;background:#fff;border:1px solid var(--border);border-radius:12px;padding:0.9rem 1.2rem;box-shadow:var(--shadow-hover);display:flex;align-items:center;gap:0.7rem;z-index:2}
+.owner-avatar{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--blue-mid));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1rem;flex-shrink:0}
+.owner-name{font-size:0.85rem;font-weight:700;color:var(--text)}
+.owner-role{font-size:0.72rem;color:var(--muted)}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;color:var(--amber);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.6rem}
+.sec-eyebrow svg{width:12px;height:12px;fill:var(--amber)}
+.about-text .heading-lg{margin-bottom:1rem}
+.about-text p{color:var(--muted);margin-bottom:0.9rem;font-size:0.975rem;line-height:1.8}
+.mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin:1.5rem 0}
+.mv-card{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:1.1rem;border-left:3px solid var(--amber)}
+.mv-card h4{font-size:0.88rem;font-weight:700;color:var(--blue);margin-bottom:0.3rem;display:flex;align-items:center;gap:0.4rem}
+.mv-card h4 svg{width:14px;height:14px;stroke:var(--amber);fill:none;stroke-width:2.5}
+.mv-card p{color:var(--muted);font-size:0.82rem;line-height:1.55;margin:0}
+.why-grid{margin-top:1.5rem;display:flex;flex-direction:column;gap:0.7rem}
+.why-item{display:flex;align-items:flex-start;gap:0.8rem}
+.why-icon{width:36px;height:36px;background:var(--amber-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:2}
+.why-content h5{font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.15rem}
+.why-content p{font-size:0.82rem;color:var(--muted);margin:0;line-height:1.5}
+
+/* ══════════════════════════════
+   SERVICES
+   ══════════════════════════════ */
+#services{background:var(--off)}
+.sec-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.sec-header-left .heading-lg{margin-bottom:0.4rem}
+.sec-desc{color:var(--muted);font-size:0.975rem;line-height:1.7;max-width:520px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.svc-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.8rem;transition:all 0.28s;position:relative;overflow:hidden;cursor:default}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--amber-light));transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:rgba(224,123,26,0.25)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-icon{width:54px;height:54px;background:var(--amber-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.svc-icon svg{width:26px;height:26px;stroke:var(--amber);fill:none;stroke-width:1.8}
+.svc-card h3{font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:0.4rem}
+.svc-card p{color:var(--muted);font-size:0.84rem;line-height:1.6;margin-bottom:1rem}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:0.3rem}
+.svc-features li{font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:0.45rem;padding:0.25rem 0;border-bottom:1px solid var(--light)}
+.svc-features li:last-child{border-bottom:none}
+.svc-features li::before{content:'';width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23e07b1a' opacity='.15'/%3E%3Cpath d='M5 8l2 2 4-4' stroke='%23e07b1a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0}
+
+/* ══════════════════════════════
+   HOW IT WORKS
+   ══════════════════════════════ */
+#process{background:var(--blue-dark);position:relative;overflow:hidden}
+#process::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:50px 50px}
+.process-header{text-align:center;margin-bottom:3rem}
+.process-header .heading-lg{color:#fff}
+.process-header .sec-desc{color:rgba(255,255,255,0.5);margin:0 auto}
+.process-header .sec-eyebrow{color:var(--amber-light)}
+.process-header .sec-eyebrow svg{fill:var(--amber-light)}
+.steps-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.steps-row::after{content:'';position:absolute;top:32px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,rgba(224,123,26,0.35),transparent);z-index:0}
+.step{text-align:center;position:relative;z-index:1;padding:0 0.5rem}
+.step-circle{width:64px;height:64px;background:var(--blue-mid);border:2px solid rgba(224,123,26,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;position:relative}
+.step-circle svg{width:26px;height:26px;stroke:var(--amber-light);fill:none;stroke-width:1.8}
+.step-num{position:absolute;top:-6px;right:-6px;width:22px;height:22px;background:var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:#fff}
+.step h4{color:#fff;font-size:0.88rem;font-weight:700;margin-bottom:0.35rem}
+.step p{color:rgba(255,255,255,0.45);font-size:0.78rem;line-height:1.5}
+
+/* ══════════════════════════════
+   PRICING
+   ══════════════════════════════ */
+#pricing{background:var(--white)}
+.pricing-intro{text-align:center;margin-bottom:2.8rem}
+.pricing-intro .heading-lg{margin-bottom:0.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.price-card{background:var(--off);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.8rem;text-align:center;transition:all 0.28s;position:relative}
+.price-card:hover:not(.featured){box-shadow:var(--shadow-hover);border-color:var(--border)}
+.price-card.featured{background:var(--blue-dark);border-color:var(--amber);box-shadow:0 8px 40px rgba(14,35,71,0.25)}
+.price-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:0.68rem;font-weight:700;padding:0.25rem 0.9rem;border-radius:20px;white-space:nowrap;letter-spacing:0.06em;text-transform:uppercase}
+.price-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.price-icon svg{width:26px;height:26px;fill:none;stroke-width:1.8}
+.price-card:not(.featured) .price-icon{background:var(--amber-pale)}
+.price-card:not(.featured) .price-icon svg{stroke:var(--amber)}
+.price-card.featured .price-icon{background:rgba(224,123,26,0.2)}
+.price-card.featured .price-icon svg{stroke:var(--amber-light)}
+.price-card h3{font-size:1rem;font-weight:700;margin-bottom:0.35rem}
+.price-card.featured h3{color:#fff}
+.price-amount{font-size:2rem;font-weight:800;color:var(--amber);line-height:1;margin:0.9rem 0}
+.price-amount small{font-size:0.85rem;font-weight:500;font-family:'Nunito',sans-serif}
+.price-card:not(.featured) .price-desc{color:var(--muted);font-size:0.84rem;line-height:1.6}
+.price-card.featured .price-desc{color:rgba(255,255,255,0.55);font-size:0.84rem;line-height:1.6}
+.price-note{text-align:center;color:var(--muted);font-size:0.82rem;font-style:italic;margin-top:1.8rem}
+.perks-row{display:flex;justify-content:center;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+.perk{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--muted);font-weight:500}
+.perk svg{width:16px;height:16px;stroke:var(--green);fill:none;stroke-width:2.5}
+
+/* ══════════════════════════════
+   TESTIMONIALS
+   ══════════════════════════════ */
+#testimonials{background:var(--off)}
+.testi-header{text-align:center;margin-bottom:2.8rem}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.tcard{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.8rem;position:relative;transition:box-shadow 0.2s}
+.tcard:hover{box-shadow:var(--shadow-hover)}
+.quote-icon{position:absolute;top:1.4rem;right:1.4rem;width:32px;height:32px;opacity:0.08}
+.quote-icon svg{width:32px;height:32px;fill:var(--amber)}
+.stars{display:flex;gap:2px;margin-bottom:0.9rem}
+.stars svg{width:16px;height:16px;fill:var(--amber)}
+.tcard-body{color:var(--muted);font-size:0.9rem;line-height:1.75;margin-bottom:1.4rem;font-style:italic}
+.tcard-author{display:flex;align-items:center;gap:0.75rem}
+.tavatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;color:#fff}
+.tauthor-name{font-size:0.88rem;font-weight:700;color:var(--text)}
+.tauthor-loc{font-size:0.75rem;color:var(--muted);display:flex;align-items:center;gap:0.3rem}
+.tauthor-loc svg{width:11px;height:11px;stroke:var(--muted);fill:none;stroke-width:2}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:2.5rem}
+.stat-cell{background:var(--card);padding:1.5rem;text-align:center}
+.stat-num{font-size:1.8rem;font-weight:800;color:var(--blue);display:block;line-height:1;margin-bottom:0.2rem}
+.stat-lbl{font-size:0.76rem;color:var(--muted)}
+
+/* ══════════════════════════════
+   FAQ
+   ══════════════════════════════ */
+#faq{background:var(--white)}
+.faq-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.faq-item{background:var(--off);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.2s}
+.faq-item.open{border-color:rgba(224,123,26,0.4)}
+.faq-q{padding:1.1rem 1.3rem;cursor:pointer;font-weight:600;font-size:0.9rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;user-select:none;color:var(--text);transition:color 0.2s}
+.faq-q:hover{color:var(--amber)}
+.faq-item.open .faq-q{color:var(--amber)}
+.faq-chevron{width:18px;height:18px;flex-shrink:0;stroke:var(--amber);fill:none;stroke-width:2;transition:transform 0.3s}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.875rem;color:var(--muted);line-height:1.7;padding:0 1.3rem}
+.faq-item.open .faq-a{max-height:160px;padding:0 1.3rem 1.1rem}
+.faq-cta{margin-top:2rem;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.faq-cta p{color:rgba(255,255,255,0.7);font-size:0.9rem}
+.faq-cta-btns{display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center}
+
+/* ══════════════════════════════
+   CONTACT
+   ══════════════════════════════ */
+#contact{background:var(--off)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3.5rem;margin-top:2.5rem}
+.cinfo-items{display:flex;flex-direction:column;gap:1.4rem}
+.cinfo-item{display:flex;gap:1rem;align-items:flex-start}
+.cinfo-icon{width:46px;height:46px;background:var(--blue-dark);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cinfo-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
+.cinfo-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:0.25rem}
+.cinfo-value{color:var(--text);font-size:0.92rem;line-height:1.55}
+.cinfo-value a{color:var(--blue);font-weight:600;transition:color 0.2s}
+.cinfo-value a:hover{color:var(--amber)}
+.cinfo-highlight{color:var(--amber) !important;font-weight:700 !important}
+.contact-btns{display:flex;flex-direction:column;gap:0.7rem;margin-top:1.5rem}
+.cbtn{display:flex;align-items:center;gap:0.75rem;padding:0.9rem 1.3rem;border-radius:9px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.22s}
+.cbtn svg{width:20px;height:20px;flex-shrink:0}
+.cbtn-wa{background:#25D366;color:#fff}
+.cbtn-wa svg{fill:#fff}
+.cbtn-wa:hover{background:#1db954;transform:translateY(-1px)}
+.cbtn-call{background:var(--blue-dark);color:#fff}
+.cbtn-call svg{stroke:#fff;fill:none;stroke-width:2}
+.cbtn-call:hover{background:var(--blue-mid)}
+.cbtn-dir{background:#fff;color:var(--text);border:1.5px solid var(--border)}
+.cbtn-dir svg{stroke:var(--blue);fill:none;stroke-width:2}
+.cbtn-dir:hover{border-color:var(--amber);color:var(--amber)}
+/* form */
+.cform-wrap{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:2.2rem;box-shadow:var(--shadow)}
+.cform-wrap h3{font-size:1.3rem;font-weight:700;margin-bottom:0.3rem;color:var(--blue)}
+.cform-sub{color:var(--muted);font-size:0.85rem;margin-bottom:1.5rem}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:0.78rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.04em}
+.field label .req{color:#e05252;margin-left:2px}
+.field input,.field select,.field textarea{width:100%;padding:0.75rem 1rem;border:1.5px solid var(--border);border-radius:8px;font-family:'Outfit',sans-serif;font-size:0.9rem;color:var(--text);background:#fff;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(224,123,26,0.1)}
+.field textarea{resize:vertical;min-height:90px}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6e84' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;cursor:pointer}
+.form-btn{width:100%;padding:0.95rem;background:var(--amber);color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.22s;letter-spacing:0.02em;display:flex;align-items:center;justify-content:center;gap:0.5rem}
+.form-btn:hover{background:var(--amber-light);color:var(--blue-dark);transform:translateY(-1px)}
+.form-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5}
+.form-note{text-align:center;color:var(--muted);font-size:0.78rem;margin-top:0.75rem}
+
+/* ══════════════════════════════
+   FOOTER
+   ══════════════════════════════ */
+footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0 1.5rem}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.fb-logo{display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem}
+.fb-logo-icon{width:34px;height:34px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.fb-logo-icon svg{width:18px;height:18px;fill:#fff}
+.fb-logo-text{font-size:0.9rem;font-weight:800;color:#fff;line-height:1.2}
+.fb-desc{font-size:0.84rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:260px;margin-bottom:0.75rem}
+.fb-owner{font-size:0.78rem;color:rgba(255,255,255,0.3);font-style:italic}
+.fcol h4{color:#fff;font-size:0.73rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem}
+.fcol a,.fcol p{display:block;color:rgba(255,255,255,0.45);text-decoration:none;font-size:0.84rem;margin-bottom:0.5rem;line-height:1.6;transition:color 0.2s}
+.fcol a:hover{color:var(--amber-light)}
+.fcol .fcontact-item{display:flex;align-items:flex-start;gap:0.5rem;margin-bottom:0.6rem}
+.fcol .fcontact-item svg{width:14px;height:14px;stroke:var(--amber);fill:none;stroke-width:2;flex-shrink:0;margin-top:3px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,0.28)}
+
+/* ══════════════════════════════
+   FLOATING BUTTONS
+   ══════════════════════════════ */
+.float-wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:990;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);transition:transform 0.2s;text-decoration:none}
+.float-wa:hover{transform:scale(1.1)}
+.float-wa svg{width:28px;height:28px;fill:#fff}
+.float-call{position:fixed;bottom:5rem;right:1.5rem;z-index:990;width:48px;height:48px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(26,58,107,0.4);transition:transform 0.2s;text-decoration:none}
+.float-call:hover{transform:scale(1.1)}
+.float-call svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ══════════════════════════════
+   SCROLL REVEAL
+   ══════════════════════════════ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ══════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════ */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .nav-actions .btn{display:none}
+  .ham{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .about-img-wrap{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .steps-row{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .steps-row::after{display:none}
+  .pricing-grid{grid-template-columns:1fr 1fr}
+  .price-card.featured{transform:none}
+  .testi-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .faq-wrap{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .sec-header{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:580px){
+  section{padding:3.5rem 0}
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-trust{flex-direction:column;gap:0.75rem}
+  .services-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .steps-row{grid-template-columns:1fr}
+  .field-row{grid-template-columns:1fr}
+  .mv-cards{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .trust-bar-inner{flex-direction:column;gap:0.9rem;align-items:flex-start;padding:0 5%}
+  .tbar-sep{display:none}
+  .perks-row{flex-direction:column;align-items:center;gap:0.75rem}
+  .stats-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     NAVBAR
+     ══════════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <div class="nav-logo-icon">
+        <!-- Lightning bolt / electronics icon -->
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="nav-brand-text">
+        <div class="nav-brand-name">Sri Venkteshwara Electronics</div>
+        <div class="nav-brand-sub">Doddapet, Madhugiri · Since 2009</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+        +91 99453 12359
+      </span>
+      <a href="https://wa.me/919945312359" target="_blank" class="btn btn-wa btn-sm">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="#fff" fill="none" stroke-width="2"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="ham" id="ham" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#about" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    About Us
+  </a>
+  <a href="#services" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    Services
+  </a>
+  <a href="#pricing" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+    Pricing
+  </a>
+  <a href="#testimonials" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    Reviews
+  </a>
+  <a href="#faq" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+    FAQ
+  </a>
+  <a href="#contact" onclick="closeMob()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+    Contact
+  </a>
+  <div class="mob-nav-actions">
+    <a href="https://wa.me/919945312359" target="_blank" class="btn btn-wa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      WhatsApp Us
+    </a>
+    <a href="tel:+919945312359" class="btn btn-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      Call Now
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     HERO
+     ══════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-photo"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">
+          <span></span>
+          Madhugiri's Trusted Electronics Expert
+        </div>
+        <h1 class="heading-xl hero-title">
+          Your Electronics<br>
+          <span class="line2">Fixed Fast &</span><br>
+          Fixed Right
+        </h1>
+        <p class="hero-desc">
+          Expert TV repair, kitchen appliance servicing, and quality electronics sales at Doddapet, Madhugiri. 15+ years of trusted service by <strong style="color:#fff">Manjunatha B V</strong>.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+            Book a Service
+          </a>
+          <a href="https://wa.me/919945312359" target="_blank" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.534 5.854L0 24l6.29-1.51A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.373l-.36-.214-3.733.897.934-3.617-.234-.372A9.818 9.818 0 0112 2.182c5.414 0 9.818 4.404 9.818 9.818 0 5.414-4.404 9.818-9.818 9.818z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="tel:+919945312359" class="btn btn-ghost btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            Call Now
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="htrust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Free Diagnostic Check</div>
+          <div class="htrust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 1–3 Day Turnaround</div>
+          <div class="htrust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Genuine Parts Only</div>
+          <div class="htrust-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Open Today
+            <span class="open-badge"><span class="open-dot"></span> Open</span>
+          </div>
+        </div>
+      </div>
+      <!-- Stats Card -->
+      <div class="hero-card">
+        <div class="hero-card-title">Why Madhugiri Trusts Us</div>
+        <div class="hstat-grid">
+          <div class="hstat"><span class="hstat-num">15+</span><span class="hstat-lbl">Years Experience</span></div>
+          <div class="hstat"><span class="hstat-num">5000+</span><span class="hstat-lbl">Happy Customers</span></div>
+          <div class="hstat"><span class="hstat-num">100%</span><span class="hstat-lbl">Satisfaction Rate</span></div>
+          <div class="hstat"><span class="hstat-num">₹100</span><span class="hstat-lbl">Diagnostic Fee</span></div>
+        </div>
+        <div class="hcard-services">
+          <span class="hchip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            TV Repair
+          </span>
+          <span class="hchip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            Kitchen Appliances
+          </span>
+          <span class="hchip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+            Audio Systems
+          </span>
+          <span class="hchip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+            New & Used Sales
+          </span>
+        </div>
+        <div class="hcard-info">
+          <div class="hci">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Doddapet, Madhugiri, Karnataka 572132
+          </div>
+          <div class="hci">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Mon–Sat: 9 AM–8 PM &nbsp;|&nbsp; Sun: 10 AM–6 PM
+          </div>
+          <div class="hci">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            +91 99453 12359
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     TRUST BAR
+     ══════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="tbar-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Genuine Parts Guaranteed
+    </div>
+    <div class="tbar-sep"></div>
+    <div class="tbar-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      1–3 Day Repair Turnaround
+    </div>
+    <div class="tbar-sep"></div>
+    <div class="tbar-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      Free Diagnostic Before Repair
+    </div>
+    <div class="tbar-sep"></div>
+    <div class="tbar-item">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      5000+ Satisfied Customers
+    </div>
+    <div class="tbar-sep"></div>
+    <div class="tbar-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      15+ Years of Trusted Service
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     ABOUT
+     ══════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-placeholder">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Electronics repair technician at work" loading="lazy">
+        </div>
+        <div class="exp-badge">
+          <span class="exp-num">15+</span>
+          <span class="exp-lbl">Years in<br>Business</span>
+        </div>
+        <div class="owner-card">
+          <div class="owner-avatar">M</div>
+          <div>
+            <div class="owner-name">Manjunatha B V</div>
+            <div class="owner-role">Owner & Chief Technician</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <div class="sec-eyebrow">
+          <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>
+          About Us
+        </div>
+        <h2 class="heading-lg">Madhugiri's Most Trusted Electronics Shop</h2>
+        <p>Sri Venkteshwara Electronics, owned by <strong>Manjunatha B V</strong>, has been the go-to destination at Doddapet, Madhugiri for electronics repair, service, and sales since 2009.</p>
+        <p>Whether your TV stopped working, your mixer is making noise, or you want to buy a quality used appliance — we handle it all with expert care at prices you can trust.</p>
+        <div class="mv-cards">
+          <div class="mv-card">
+            <h4>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Our Mission
+            </h4>
+            <p>Fast, honest, and reliable electronics repair and sales that keep Madhugiri homes running smoothly.</p>
+          </div>
+          <div class="mv-card">
+            <h4>
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Our Vision
+            </h4>
+            <p>To be the most reliable and affordable electronics partner in and around Madhugiri.</p>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="why-content">
+              <h5>Expert Technician — 15+ Years</h5>
+              <p>Hands-on experience with all brands: Sony, Samsung, LG, Philips, Videocon and more</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="why-content">
+              <h5>Genuine Parts & Warranty</h5>
+              <p>Only genuine spare parts used. Service warranty included on every repair job</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="why-content">
+              <h5>Honest & Transparent Pricing</h5>
+              <p>Free diagnostic check first. You approve the cost before we start any repair</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     SERVICES
+     ══════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>What We Do</div>
+        <h2 class="heading-lg">Our Services</h2>
+        <p class="sec-desc">Complete electronics repair, sales & maintenance for homes and businesses across Madhugiri.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary reveal">Book a Service →</a>
+    </div>
+    <div class="services-grid">
+
+      <!-- TV Repair -->
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>TV Repair & Servicing</h3>
+        <p>Expert repair for all TV types — LED, Smart TVs, LCD, and old CRT model TVs. All brands serviced.</p>
+        <ul class="svc-features">
+          <li>LED & Smart TV repair</li>
+          <li>Old/CRT model TV repair</li>
+          <li>Screen & display issues</li>
+          <li>No power / no picture fix</li>
+          <li>Audio & speaker problems</li>
+        </ul>
+      </div>
+
+      <!-- Kitchen Appliances -->
+      <div class="svc-card reveal reveal-delay-1">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+          </svg>
+        </div>
+        <h3>Kitchen Appliances</h3>
+        <p>Complete repair and servicing for mixers, grinders, mixies, and other kitchen appliances.</p>
+        <ul class="svc-features">
+          <li>Mixer & mixie repair</li>
+          <li>Grinder servicing</li>
+          <li>Blade sharpening & replacement</li>
+          <li>Motor repair & replacement</li>
+          <li>Jar & seal replacement</li>
+        </ul>
+      </div>
+
+      <!-- Audio & Electronics -->
+      <div class="svc-card reveal reveal-delay-2">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
+          </svg>
+        </div>
+        <h3>Audio & Electronics</h3>
+        <p>Repair for audio systems, home theatre, speakers, and all small household electronic devices.</p>
+        <ul class="svc-features">
+          <li>Music systems & amplifiers</li>
+          <li>Home theatre repair</li>
+          <li>Speaker & sound systems</li>
+          <li>Small electronics repair</li>
+          <li>Component replacement</li>
+        </ul>
+      </div>
+
+      <!-- New Electronics -->
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+          </svg>
+        </div>
+        <h3>New Electronics Sales</h3>
+        <p>Quality new electronics at competitive prices. TVs, appliances, and audio equipment with warranty.</p>
+        <ul class="svc-features">
+          <li>Latest LED/Smart TV models</li>
+          <li>New kitchen appliances</li>
+          <li>Audio & music systems</li>
+          <li>Manufacturer warranty</li>
+          <li>Best price guarantee</li>
+        </ul>
+      </div>
+
+      <!-- Used Electronics -->
+      <div class="svc-card reveal reveal-delay-1">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="1 4 1 10 7 10"/>
+            <polyline points="23 20 23 14 17 14"/>
+            <path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/>
+          </svg>
+        </div>
+        <h3>Used Electronics</h3>
+        <p>Quality-tested, affordable used electronics. Every item is thoroughly inspected and tested before sale.</p>
+        <ul class="svc-features">
+          <li>Quality-checked used TVs</li>
+          <li>Tested kitchen appliances</li>
+          <li>Honest condition grading</li>
+          <li>Affordable pricing</li>
+          <li>Short warranty included</li>
+        </ul>
+      </div>
+
+      <!-- Diagnostics -->
+      <div class="svc-card reveal reveal-delay-2">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <h3>Diagnostics & Testing</h3>
+        <p>Comprehensive fault detection with free estimates. Know the problem before you spend a rupee.</p>
+        <ul class="svc-features">
+          <li>Free initial diagnostic</li>
+          <li>Accurate fault detection</li>
+          <li>Written cost estimate</li>
+          <li>No fix = no charge</li>
+          <li>Expert consultation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     HOW IT WORKS
+     ══════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="process-header reveal">
+      <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>How It Works</div>
+      <h2 class="heading-lg">Simple & Transparent Process</h2>
+      <p class="sec-desc">From the moment you contact us to the moment you get your device back — we keep it clear and hassle-free.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step reveal">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          <div class="step-num">1</div>
+        </div>
+        <h4>Call or Visit Us</h4>
+        <p>Call, WhatsApp, or walk into our shop at Doddapet, Madhugiri</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="step-num">2</div>
+        </div>
+        <h4>Free Diagnostic</h4>
+        <p>We inspect your device and identify the exact fault — completely free</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <div class="step-num">3</div>
+        </div>
+        <h4>Honest Estimate</h4>
+        <p>You get a clear cost estimate. You decide — no pressure, no hidden charges</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          <div class="step-num">4</div>
+        </div>
+        <h4>Expert Repair</h4>
+        <p>Our technician repairs with genuine parts — fast and professionally done</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="step-num">5</div>
+        </div>
+        <h4>Quality Check & Handover</h4>
+        <p>Final testing done before handover. Your device back in perfect condition</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     PRICING
+     ══════════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-intro reveal">
+      <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>Transparent Pricing</div>
+      <h2 class="heading-lg">Honest & Affordable Rates</h2>
+      <p class="sec-desc" style="margin:0 auto">Fair pricing for every service. No surprises — you approve the cost before we start.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Diagnostic Check</h3>
+        <div class="price-amount">₹100<small>*</small></div>
+        <p class="price-desc">Complete fault detection before any work begins. Know the issue first.</p>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>TV Repair</h3>
+        <div class="price-amount">₹500<small>* onwards</small></div>
+        <p class="price-desc">LED, Smart TV, LCD & old model TVs. All brands. Price depends on parts needed.</p>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        </div>
+        <h3>Mixer / Grinder Repair</h3>
+        <div class="price-amount">₹300<small>* onwards</small></div>
+        <p class="price-desc">Mixer, grinder, mixie repair. Motor, blade & jar issues fixed at fair price.</p>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg>
+        </div>
+        <h3>Audio & Electronics</h3>
+        <div class="price-amount" style="font-size:1.4rem;margin:0.7rem 0">By Estimate</div>
+        <p class="price-desc">Amplifiers, home theatre, speakers & small electronics. Free estimate given first.</p>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        </div>
+        <h3>New Electronics</h3>
+        <div class="price-amount" style="font-size:1.4rem;margin:0.7rem 0">Market Price</div>
+        <p class="price-desc">New TVs, appliances & audio at competitive prices with manufacturer warranty.</p>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-icon">
+          <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg>
+        </div>
+        <h3>Used Electronics</h3>
+        <div class="price-amount" style="font-size:1.4rem;margin:0.7rem 0">Affordable</div>
+        <p class="price-desc">Quality-tested used TVs & appliances at honest budget prices. All checked before sale.</p>
+      </div>
+    </div>
+    <p class="price-note">* Final price depends on device model, fault type, and parts required. Free diagnostic before any repair.</p>
+    <div class="perks-row">
+      <div class="perk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Free Diagnostic</div>
+      <div class="perk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 1–3 Day Turnaround</div>
+      <div class="perk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Genuine Parts</div>
+      <div class="perk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> No Fix = No Charge</div>
+      <div class="perk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Service Warranty</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     TESTIMONIALS
+     ══════════════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testi-header reveal">
+      <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>Customer Reviews</div>
+      <h2 class="heading-lg">What Madhugiri Says About Us</h2>
+      <p class="sec-desc" style="margin:0 auto">Real feedback from real customers in Doddapet and Madhugiri.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard reveal">
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-body">"Excellent service! My old Samsung TV was not turning on. Manjunatha sir diagnosed it in 10 minutes and fixed it the same day. Very honest pricing — no extra charges. Highly recommended to everyone in Madhugiri!"</p>
+        <div class="tcard-author">
+          <div class="tavatar" style="background:linear-gradient(135deg,#1a3a6b,#24508f)">R</div>
+          <div>
+            <div class="tauthor-name">Rajesh Kumar</div>
+            <div class="tauthor-loc">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Madhugiri
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-1">
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-body">"My mixer grinder motor burnt out. I thought I'd have to buy a new one. Manjunatha sir repaired it perfectly for ₹350! Works like brand new now. Very helpful and humble person. Will always come here."</p>
+        <div class="tcard-author">
+          <div class="tavatar" style="background:linear-gradient(135deg,#c8842a,#e8a84a)">L</div>
+          <div>
+            <div class="tauthor-name">Lakshmi Devi</div>
+            <div class="tauthor-loc">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Doddapet
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-2">
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-body">"Bought a used LED TV from here — got it at half the market price and it works perfectly. He tested it completely before selling. Great person, great shop. The best electronics shop in Madhugiri without doubt!"</p>
+        <div class="tcard-author">
+          <div class="tavatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">S</div>
+          <div>
+            <div class="tauthor-name">Suresh Babu</div>
+            <div class="tauthor-loc">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Madhugiri
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-cell"><span class="stat-num">98%</span><span class="stat-lbl">Customer Satisfaction</span></div>
+      <div class="stat-cell"><span class="stat-num">5000+</span><span class="stat-lbl">Repairs Completed</span></div>
+      <div class="stat-cell"><span class="stat-num">15+</span><span class="stat-lbl">Years in Business</span></div>
+      <div class="stat-cell"><span class="stat-num">&lt;24h</span><span class="stat-lbl">Avg. Response Time</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FAQ
+     ══════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="testi-header reveal">
+      <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>FAQ</div>
+      <h2 class="heading-lg">Frequently Asked Questions</h2>
+      <p class="sec-desc" style="margin:0 auto">Everything you need to know before visiting or calling us.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What types of electronics do you repair?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">We repair all types of TVs (LED, Smart, LCD, CRT/old models), kitchen appliances (mixers, grinders, mixies), audio systems, amplifiers, and most household electronics. Call us if unsure — we'll let you know immediately.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is the diagnostic check really free?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Yes, the initial diagnostic check is just ₹100 — one of the lowest in Madhugiri. We identify the exact fault and give you a repair estimate BEFORE starting any work. No surprises.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you provide a warranty on repairs?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Yes! We provide a service warranty on all repairs. The duration depends on the type of repair and parts used. We use only genuine spare parts to ensure longer-lasting repairs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How long does a repair take?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Most repairs are completed within 1–3 working days. Simple faults (like a mixer repair or minor TV issue) can often be done the same day. We'll give you a realistic timeline after the diagnostic.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What brands do you service?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">All major brands: Sony, Samsung, LG, Philips, Onida, Videocon, Panasonic, Bajaj, Preethi, Prestige, and more. Both Indian and international brands across all product categories.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you sell used electronics? Are they reliable?
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Yes! We sell quality-tested used TVs and appliances. Every item is thoroughly inspected, tested, and any faults repaired before we put it up for sale. You get an honest condition report and a short warranty.</div>
+      </div>
+    </div>
+    <div class="faq-cta reveal">
+      <p>Still have a question? We're always happy to help — call or WhatsApp us directly.</p>
+      <div class="faq-cta-btns">
+        <a href="tel:+919945312359" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call Us Now
+        </a>
+        <a href="https://wa.me/919945312359" target="_blank" class="btn btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.534 5.854L0 24l6.29-1.51A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.373l-.36-.214-3.733.897.934-3.617-.234-.372A9.818 9.818 0 0112 2.182c5.414 0 9.818 4.404 9.818 9.818 0 5.414-4.404 9.818-9.818 9.818z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CONTACT
+     ══════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-eyebrow"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6"/></svg>Get In Touch</div>
+    <h2 class="heading-lg">Contact Us</h2>
+    <p class="sec-desc">Ready to repair, buy, or just have a question? Reach out — we respond fast.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="cinfo-items">
+          <div class="cinfo-item reveal">
+            <div class="cinfo-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cinfo-label">Shop Address</div>
+              <div class="cinfo-value">
+                Doddapet, Madhugiri,<br>Karnataka 572132, India<br>
+                <a href="https://maps.google.com/?q=Doddapet+Madhugiri+Karnataka" target="_blank" style="font-size:0.82rem;margin-top:0.3rem;display:inline-block">📍 Open in Google Maps →</a>
+              </div>
+            </div>
+          </div>
+          <div class="cinfo-item reveal">
+            <div class="cinfo-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div>
+              <div class="cinfo-label">Phone</div>
+              <div class="cinfo-value"><a href="tel:+919945312359" class="cinfo-highlight">+91 99453 12359</a></div>
+            </div>
+          </div>
+          <div class="cinfo-item reveal">
+            <div class="cinfo-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cinfo-label">Email</div>
+              <div class="cinfo-value"><a href="mailto:bvmanjukala1971@gmil.com">bvmanjukala1971@gmil.com</a></div>
+            </div>
+          </div>
+          <div class="cinfo-item reveal">
+            <div class="cinfo-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="cinfo-label">Business Hours</div>
+              <div class="cinfo-value">
+                Monday – Saturday: <strong>9:00 AM – 8:00 PM</strong><br>
+                Sunday: <strong>10:00 AM – 8:00 PM</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="https://wa.me/919945312359" target="_blank" class="cbtn cbtn-wa">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.534 5.854L0 24l6.29-1.51A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" fill="#fff"/></svg>
+            WhatsApp Us — Quick Response!
+          </a>
+          <a href="tel:+919945312359" class="cbtn cbtn-call">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            Call +91 99453 12359
+          </a>
+          <a href="https://maps.google.com/?q=Doddapet+Madhugiri+Karnataka" target="_blank" class="cbtn cbtn-dir">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions to Our Shop
+          </a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="cform-wrap reveal">
+        <h3>Book a Service</h3>
+        <p class="cform-sub">Fill in the details below and we'll get back to you within a few hours.</p>
+        <form onsubmit="handleForm(event)">
+          <div class="field-row">
+            <div class="field">
+              <label>Your Name <span class="req">*</span></label>
+              <input type="text" placeholder="Full name" required>
+            </div>
+            <div class="field">
+              <label>Phone Number <span class="req">*</span></label>
+              <input type="tel" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>Service Required <span class="req">*</span></label>
+              <select required>
+                <option value="" disabled selected>Select a service</option>
+                <option>TV Repair & Servicing</option>
+                <option>Kitchen Appliance Repair</option>
+                <option>Audio & Electronics Repair</option>
+                <option>Buy New Electronics</option>
+                <option>Buy Used Electronics</option>
+                <option>Diagnostics & Testing</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Your Device</label>
+              <input type="text" placeholder="e.g. Samsung 32&quot; LED TV">
+            </div>
+          </div>
+          <div class="field">
+            <label>Describe the Problem</label>
+            <textarea placeholder="e.g. No display, no power, makes noise, remote not working..."></textarea>
+          </div>
+          <button type="submit" class="form-btn" id="submitBtn">
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Service Request
+          </button>
+          <p class="form-note">Or WhatsApp us directly for instant response: <a href="https://wa.me/919945312359" style="color:var(--amber);font-weight:600">+91 99453 12359</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FOOTER
+     ══════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="fb-logo">
+          <div class="fb-logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="fb-logo-text">Sri Venkteshwara<br>Electronics</div>
+        </div>
+        <p class="fb-desc">Your trusted electronics repair, sales & service partner in Doddapet, Madhugiri, Karnataka since 2009.</p>
+        <p class="fb-owner">— Owned by Manjunatha B V</p>
+      </div>
+      <div class="fcol">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="fcol">
+        <h4>Our Services</h4>
+        <a href="#services">TV Repair & Servicing</a>
+        <a href="#services">Kitchen Appliances</a>
+        <a href="#services">Audio & Electronics</a>
+        <a href="#services">New Electronics Sales</a>
+        <a href="#services">Used Electronics</a>
+        <a href="#services">Diagnostics & Testing</a>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <div class="fcontact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>Doddapet, Madhugiri, Karnataka 572132</p>
+        </div>
+        <div class="fcontact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="tel:+919945312359">+91 99453 12359</a>
+        </div>
+        <div class="fcontact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p>Mon–Sat: 9 AM–8 PM<br>Sun: 10 AM–6 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sri Venkteshwara Electronics. All rights reserved.</p>
+      <p>Trusted Electronics Repair & Sales · Madhugiri, Karnataka</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="https://wa.me/919945312359" target="_blank" class="float-wa" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.534 5.854L0 24l6.29-1.51A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+</a>
+<a href="tel:+919945312359" class="float-call" title="Call Now">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+</a>
+
+<script>
+// Mobile Nav
+function toggleMob(){
+  document.getElementById('mobNav').classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('mobNav').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  if(!e.target.closest('.navbar') && !e.target.closest('.mob-nav')) closeMob();
+});
+
+// FAQ
+function toggleFaq(el){
+  const item = el.parentElement;
+  document.querySelectorAll('.faq-item').forEach(i => { if(i!==item) i.classList.remove('open'); });
+  item.classList.toggle('open');
+}
+
+// Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// Form
+function handleForm(e){
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Request Sent!';
+  btn.style.background = '#16a34a';
+  setTimeout(() => {
+    btn.innerHTML = '<svg viewBox="0 0 24 24" width="
