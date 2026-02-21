@@ -7,7 +7,7 @@
 <meta name="description" content="Expert electronics repair & sales in Madhugiri. TV repair, mixer/grinder servicing, used & new electronics. 15+ years experience. Call +91 99453 12359. Walk-in welcome at Doddapet.">
 <meta name="keywords" content="TV repair Madhugiri, electronics repair Madhugiri, mixer grinder repair, LED TV repair, appliance service Doddapet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" onerror="this.remove()">
 <style>
 /* ══════════════════════════════════════
    DESIGN SYSTEM
@@ -38,7 +38,7 @@
 /* RESET & BASE */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--off);overflow-x:hidden;line-height:1.6}
+body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--off);overflow-x:hidden;line-height:1.6}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 button{font-family:'Outfit',sans-serif;cursor:pointer;border:none}
@@ -124,10 +124,10 @@ section{padding:5rem 0}
 }
 .hero-photo{
   position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?w=1600&q=80');
-  background-size:cover;background-position:center;
+  background:linear-gradient(135deg, #061020 0%, #0e2347 40%, #1a3a6b 70%, #0a1a35 100%);
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg, rgba(14,35,71,0.96) 0%, rgba(14,35,71,0.88) 45%, rgba(14,35,71,0.5) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg, rgba(14,35,71,0.98) 0%, rgba(14,35,71,0.95) 45%, rgba(14,35,71,0.85) 100%)}
+.hero-circuit{position:absolute;inset:0;background-image:linear-gradient(rgba(224,123,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(224,123,26,.04) 1px,transparent 1px);background-size:44px 44px;}
 .hero-inner{position:relative;z-index:2;padding:5rem 0}
 .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:3rem;align-items:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(224,123,26,0.15);border:1px solid rgba(224,123,26,0.4);color:var(--amber-light);padding:0.35rem 0.9rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.2rem}
@@ -381,8 +381,10 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0
 /* ══════════════════════════════
    SCROLL REVEAL
    ══════════════════════════════ */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.visible{opacity:1;transform:none}
+/* Reveal animation - content always visible, subtle animation when JS works */
+.reveal{opacity:1;transform:none}
+.reveal-anim{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal-anim.visible{opacity:1;transform:none}
 .reveal-delay-1{transition-delay:0.1s}
 .reveal-delay-2{transition-delay:0.2s}
 .reveal-delay-3{transition-delay:0.3s}
@@ -511,6 +513,7 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0
 <section class="hero" id="home">
   <div class="hero-photo"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-circuit"></div>
   <div class="container hero-inner">
     <div class="hero-grid">
       <div>
@@ -636,8 +639,48 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <div class="about-img-placeholder">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Electronics repair technician at work" loading="lazy">
+        <div class="about-img-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2.5rem;min-height:320px;">
+          <!-- Electronics Technician Illustration -->
+          <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer ring -->
+            <circle cx="80" cy="80" r="76" stroke="#e07b1a" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.5"/>
+            <!-- TV Screen -->
+            <rect x="18" y="42" width="100" height="66" rx="6" fill="#1a3a6b" stroke="#24508f" stroke-width="2"/>
+            <rect x="26" y="50" width="84" height="50" rx="3" fill="#0a1628"/>
+            <!-- Screen glow -->
+            <rect x="26" y="50" width="84" height="50" rx="3" fill="url(#screenGlow)" opacity="0.4"/>
+            <!-- TV stand -->
+            <path d="M58 108h20M68 108v8" stroke="#24508f" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="50" y="116" width="36" height="5" rx="2.5" fill="#1a3a6b"/>
+            <!-- Circuit lines on screen -->
+            <line x1="36" y1="65" x2="60" y2="65" stroke="#e07b1a" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <circle cx="60" cy="65" r="3" fill="#e07b1a" opacity="0.8"/>
+            <line x1="60" y1="65" x2="60" y2="78" stroke="#e07b1a" stroke-width="1.5" opacity="0.6"/>
+            <line x1="60" y1="78" x2="85" y2="78" stroke="#e07b1a" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            <circle cx="85" cy="78" r="3" fill="#f59c3a" opacity="0.8"/>
+            <line x1="85" y1="65" x2="100" y2="65" stroke="#24508f" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="36" y1="88" x2="70" y2="88" stroke="#24508f" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <line x1="75" y1="88" x2="100" y2="88" stroke="#e07b1a" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <!-- Wrench tool -->
+            <g transform="translate(108, 38) rotate(-35)">
+              <rect x="-4" y="-20" width="8" height="40" rx="2" fill="#e07b1a"/>
+              <circle cx="0" cy="-20" r="9" fill="none" stroke="#e07b1a" stroke-width="3"/>
+              <circle cx="0" cy="-20" r="4" fill="#0e2347"/>
+            </g>
+            <!-- Checkmark badge -->
+            <circle cx="126" cy="106" r="18" fill="#16a34a"/>
+            <path d="M118 106l5 5 10-10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#e07b1a"/>
+                <stop offset="100%" stop-color="#1a3a6b" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+          </svg>
+          <div style="text-align:center;font-family:'Outfit',sans-serif;">
+            <div style="color:#e07b1a;font-size:1rem;font-weight:800;letter-spacing:-0.01em;">Expert Electronics Repair</div>
+            <div style="color:rgba(255,255,255,0.55);font-size:0.82rem;margin-top:0.3rem;">Serving Madhugiri Since 2009</div>
+          </div>
         </div>
         <div class="exp-badge">
           <span class="exp-num">15+</span>
@@ -1160,7 +1203,7 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0
             </div>
             <div>
               <div class="cinfo-label">Email</div>
-              <div class="cinfo-value"><a href="mailto:bvmanjukala1971@gmil.com">bvmanjukala1971@gmil.com</a></div>
+              <div class="cinfo-value"><a href="mailto:info@srivenkteshwaraelectronics.com">info@srivenkteshwaraelectronics.com</a></div>
             </div>
           </div>
           <div class="cinfo-item reveal">
@@ -1171,7 +1214,7 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,0.65);padding:3.5rem 0
               <div class="cinfo-label">Business Hours</div>
               <div class="cinfo-value">
                 Monday – Saturday: <strong>9:00 AM – 8:00 PM</strong><br>
-                Sunday: <strong>10:00 AM – 8:00 PM</strong>
+                Sunday: <strong>10:00 AM – 6:00 PM</strong>
               </div>
             </div>
           </div>
@@ -1330,11 +1373,12 @@ function toggleFaq(el){
   item.classList.toggle('open');
 }
 
-// Scroll reveal
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+// All content visible by default - no hidden content risk
+// Scroll reveal is purely a visual enhancement
+document.querySelectorAll('.reveal').forEach(el => {
+  el.style.opacity = '1';
+  el.style.transform = 'none';
+});
 
 // Form
 function handleForm(e){
